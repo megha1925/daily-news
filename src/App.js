@@ -5,10 +5,11 @@ import "./App.css";
 
 const App = () => {
   const [search, setSearch] = useState("");
+  const [code, setCode] = useState("in");
   return (
     <div className="container">
-      <SearchBar onSubmit={setSearch} />
-      <NewsApi query={search} />
+      <SearchBar onSubmit={setSearch} countryCode={setCode} />
+      <NewsApi query={search} country={code} />
     </div>
   );
 };
